@@ -6,15 +6,18 @@
             <!-- [ form-element ] start -->
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="padding: 10px 25px;">
                         <h4>Reset Modem</h4>
                         <hr>
                     </div>
                     <div class="card-body table-responsive">
-                        <button class="btn btn-warning mr-2">Import Data</button>
-                        <button class="btn btn-success">Reset Modem</button>
-
-                        <table class="table table-striped table-bordered mt-4" >
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <button class="btn btn-warning mr-2"><i class="fas fa-file-import"></i> Import Data</button>
+                                <button class="btn btn-success"><i class="fa fa-refresh"></i> Reset Modem</button>
+                            </div>
+                        </div>
+                        <table id="dataTable" class="table table-striped table-bordered mt-5" >
                             <thead>
                                 <tr class=" text-center">
                                     <th>No</th>
@@ -50,4 +53,4 @@
 
     </div>
 </section>
-<!-- [ Main Content ] end -->s
+<!-- [ Main Content ] end -->

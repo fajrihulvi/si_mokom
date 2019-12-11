@@ -36,7 +36,7 @@ class Auth extends CI_Controller
 	public function login()
 	{
 
-		$this->data['title'] = 'Login Page';
+		$data['title'] = 'Login Page';
 		if ($this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -69,14 +69,7 @@ class Auth extends CI_Controller
 		}
 		else
 		{
-			// the user is not logging in so display the login page
-			// set the flash data error message if there is one
-			//$this->session->set_flashdata('message', 'username atau password salah');
-			
-			$this->load->view('auth/header');
-			$this->load->view('auth/login', $this->data);
-			$this->load->view('auth/footer');
-			//$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'login', $this->data);
+			$this->template->load('auth/template', 'auth/login', $data);
 		}
 	}
 
@@ -168,6 +161,7 @@ class Auth extends CI_Controller
 	 */
 	public function forgot_password()
 	{
+		$data['title'] = 'Forgot Password';
 		// setting validation rules by checking whether identity is username or email
 		if ($this->config->item('identity', 'ion_auth') != 'email')
 		{
@@ -197,10 +191,9 @@ class Auth extends CI_Controller
 			}
 
 			// set any errors and display the form
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-			$this->load->view('auth/header');
-			$this->load->view('auth/forgot_password');
-			$this->load->view('auth/footer');
+			$data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			$this->template->load('auth/template', 'auth/forgot_password', $data);
+			
 
 			//$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'forgot_password', $this->data);
 		}
@@ -422,7 +415,7 @@ class Auth extends CI_Controller
 	 */
 	public function create_user()
 	{
-		$this->data['title'] = 'Registrasi';
+		$data['title'] = 'Registrasi';
 
 		if ($this->ion_auth->logged_in())
 		{
@@ -455,9 +448,7 @@ class Auth extends CI_Controller
 		}
 		else
 		{
-			$this->load->view('auth/header');
-			$this->load->view('auth/create_user');
-			$this->load->view('auth/footer');
+			$this->template->load('auth/template', 'auth/create_user', $data);
 		}
 	}
 	/**

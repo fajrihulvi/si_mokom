@@ -25,6 +25,63 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
+                        <div class="mb-2">
+                            <button class="btn btn-warning mr-2"><i class="fa fa-plus-square"></i> Tambah Pelanggan</button>
+                            <button class="btn btn-outline-primary"><i class="fa fa-print"></i> Print</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="dataTable" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">No</th>
+                                        <th rowspan="2">Site Code</th>
+                                        <th rowspan="2">Location Type</th>
+                                        <th rowspan="2">IDPEL</th>
+                                        <th rowspan="2">Site Name</th>
+                                        <th rowspan="2">Nama Pelanggan</th>
+                                        <th rowspan="2">Alamat</th>
+                                        <th rowspan="2">Status</th>
+                                        <th rowspan="2">Tarif</th>
+                                        <th rowspan="2">Daya</th>
+                                        <th colspan="3">Data Meter</th>
+                                        <th colspan="3">Data Modem</th>
+                                        <th colspan="3">Data Simcard</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Merk</th>
+                                        <th>Type</th>
+                                        <th>No. Seri</th>
+                                        <th>Merk</th>
+                                        <th>Type</th>
+                                        <th>No. Imei</th>
+                                        <th>Nomor</th>
+                                        <th>Brand</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>16300</td>
+                                        <td>CUSTOMER</td>
+                                        <td>163000001342</td>
+                                        <td>TANJUNG</td>
+                                        <td>ALI YASIN</td>
+                                        <td>JL. SRIWIJAYA</td>
+                                        <td>ACTIVE</td>
+                                        <td>B3</td>
+                                        <td>345000</td>
+                                        <td>WASION</td>
+                                        <td>imeter 318</td>
+                                        <td>201401001968</td>
+                                        <td>WASION</td>
+                                        <td>WS-18E</td>
+                                        <td>358191919819</td>
+                                        <td>85338939606</td>
+                                        <td>TELKOMSEL</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

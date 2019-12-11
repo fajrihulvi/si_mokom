@@ -14,6 +14,8 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- vendor css -->
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/dataTables.bootstrap4.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
     
     
@@ -129,7 +131,7 @@
                                         </li>
                                         <li class="notification">
                                             <div class="media">
-                                                <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                                <img class="img-radius" src="<?= base_url('assets/images/user/avatar-2.jpg') ?>" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
                                                     <p>Prchace New Theme and make payment</p>
@@ -138,7 +140,7 @@
                                         </li>
                                         <li class="notification">
                                             <div class="media">
-                                                <img class="img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+                                                <img class="img-radius" src="<?= base_url('assets/images/user/avatar-1.jpg') ?>" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>12 min</span></p>
                                                     <p>currently login</p>
@@ -147,7 +149,7 @@
                                         </li>
                                         <li class="notification">
                                             <div class="media">
-                                                <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                                <img class="img-radius" src="<?= base_url('assets/images/user/avatar-2.jpg') ?>" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
                                                     <p>Prchace New Theme and make payment</p>
@@ -195,11 +197,14 @@
 <script src="<?= base_url('assets/js/pcoded.min.js') ?>"></script>
 
 <!-- Apex Chart -->
-<script src="<?= base_url('assets/js/plugins/apexcharts.min.js') ?>"></script>
+<!-- <script src="<?= base_url('assets/js/plugins/apexcharts.min.js') ?>"></script> -->
 
 <!-- custom-chart js -->
-<script src="<?= base_url('assets/js/pages/dashboard-main.js') ?>"></script>
-<script src="<?= base_url('assets/js/pages/chart-apex.js') ?>"></script>
+<!-- <script src="<?= base_url('assets/js/pages/dashboard-main.js') ?>"></script> -->
+<!-- <script src="<?= base_url('assets/js/pages/chart-apex.js') ?>"></script> -->
+<script src="<?= base_url('assets/js/jquery.dataTables.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/dataTables.bootstrap4.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/myscript.js')?>"></script>
 
 </body>
 

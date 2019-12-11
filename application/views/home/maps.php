@@ -6,7 +6,7 @@
             <!-- [ form-element ] start -->
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="padding: 10px 25px;">
                         <h4>Maps Pelanggan</h4>
                         <hr>
                     </div>

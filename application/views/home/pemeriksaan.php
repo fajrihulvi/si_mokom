@@ -6,14 +6,47 @@
             <!-- [ form-element ] start -->
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="padding: 10px 25px;">
                         <h4>Pemeriksaan</h4>
                         <hr>
                     </div>
                     <div class="card-body">
-                        <div class="float-right">  
-                           <button class="btn btn-outline-primary">Print</button>
+                        <div class="float-right mb-3">  
+                           <button class="btn btn-outline-primary"><i class="fa fa-print"></i> Print</button>
                         </div>
+                        <div class="table-responsive">
+                            <table id="dataTable" class="table table-striped table-bordered mt-5" >
+                                <thead>
+                                    <tr class=" text-center">
+                                        <th>No</th>
+                                        <th>IDPEL</th>
+                                        <th>UNIT</th>
+                                        <th>PELANGGAN</th>
+                                        <th>ALAMAT</th>
+                                        <th>TARIF</th>
+                                        <th>DAYA</th>
+                                        <th>PEKERJAAN</th>
+                                        <th>Hasil Pemeriksaan dan Pemeliharaan</th>
+                                        <th>Tindak Lanjut Pemeriksaan</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>163000001342</td>
+                                        <td>TANJUNG PADANG</td>
+                                        <td>ALI YASIN</td>
+                                        <td>Jl. H SELONG RT.13/RW.01</td>
+                                        <td>B2</td>
+                                        <td>13200</td>
+                                        <td>Pemeliharaan</td>
+                                        <td>Modem Normal</td>
+                                        <td>Restart Modem</td>
+                                        <td>Belum Selesai</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                     </div>
                 </div>
             </div>

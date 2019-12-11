@@ -12,11 +12,8 @@ class Pelanggan extends CI_Controller
 		$data['title'] = "Data Pelanggan";
 		$data['pelanggan'] = $this->pelanggan->getAllData();
 
-		$this->load->view('admin/template/header');
-		$this->load->view('admin/template/sidebar');
-		$this->load->view('admin/template/top_bar');
-		$this->load->view('master/pelanggan', $data);
-		$this->load->view('admin/template/footer');
+		$this->template->load('admin/template', 'master/pelanggan', $data);
+
 	}
 
 }
