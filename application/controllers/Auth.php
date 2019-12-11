@@ -429,36 +429,35 @@ class Auth extends CI_Controller
 			redirect('home', 'refresh');
 		}
 
+		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
+		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[users.username]');
+		$this->form_validation->set_rules('email', 'Email Address', 'trim|required');
+		$this->form_validation->set_rules('phone', 'Phone Number', 'trim|required');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|matches[konfir-password]');
+		$this->form_validation->set_rules('konfir-password', 'Confirm Password', 'trim|required|min_length[6]|matches[password]');
+
 		if ($this->form_validation->run() === TRUE)
 		{
 			$email = strtolower($this->input->post('email'));
-			$identity = ($identity_column === 'email') ? $email : $this->input->post('identity');
+			$identity = $this->input->post('username');
 			$password = $this->input->post('password');
 
 			$additional_data = array(
 				'first_name' => $this->input->post('first_name'),
 				'last_name' => $this->input->post('last_name'),
-				'company' => $this->input->post('company'),
+				'company' => '',
 				'phone' => $this->input->post('phone'),
 			);
-		}
-		if ($this->form_validation->run() === TRUE && $this->ion_auth->register($identity, $password, $email, $additional_data))
-		{
-			// check to see if we are creating the user
-			// redirect them back to the admin page
-			$this->session->set_flashdata('message', 'Gagal Registrasi');
-			redirect("auth/create_user", 'refresh');
+			$this->ion_auth->register($identity, $password, $email, $additional_data);
+			$this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">'.$this->ion_auth->messages().'</div>');
+			redirect("auth/login", 'refresh');
 		}
 		else
 		{
-			// display the create user form
-			// set the flash data error message if there is one
-
 			$this->load->view('auth/header');
 			$this->load->view('auth/create_user');
 			$this->load->view('auth/footer');
-
-			//$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'create_user', $this->data);
 		}
 	}
 	/**
