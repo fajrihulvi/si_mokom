@@ -91,11 +91,6 @@
 								</div>
 							</div>
 						</li>
-						<!-- <li>
-							<a href="<?= base_url('auth/logout') ?>" class="dud-logout" title="Logout">
-								<i class="feather icon-log-out"></i>
-							</a>
-						</li> -->
 						<li>
 							<div class="dropdown drp-user">
 								<a href="#!" class="dropdown-toggle" data-toggle="dropdown">
@@ -111,8 +106,7 @@
 									</div>
 									<ul class="pro-body">
 										<li><a href="#" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
-										<li><a href="#" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
-										<li><a href="#" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+										<li><a href="#" class="dropdown-item"><i class="feather icon-lock"></i> Change Password</a></li>
 									</ul>
 								</div>
 							</div>
