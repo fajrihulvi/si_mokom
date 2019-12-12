@@ -28,5 +28,32 @@ $(document).ready(function() {
         });
     });
 
+    $('#meterAdd').on('click', function () {
+        //console.log(id);
+        $('.modal-body form').attr('action', 'http://localhost/si_mokom/meter/tambah');
+        $('.modal-header h5').html('Tambah Data Meter');
+        $('#no_seri').val('');
+        $('#type').val('');
+        $('#merk').val('');
+    });
+
+    $('#dataTable').on('click', '#editMeter', function () {
+        const id = $(this).data('id');
+        $('.modal-body form').attr('action', 'http://localhost/si_mokom/meter/edit/' + id);
+        $('.modal-header h5').html('Ubah Data meter');
+        console.log(id);
+        $.ajax({
+            url: 'http://localhost/si_mokom/meter/tampilubah',
+            data: { id: id },
+            dataType: 'json',
+            method: 'post',
+            success: function (data) {
+                $('#no_seri').val(data.no_seri);
+                $('#type').val(data.tipe);
+                $('#merk').val(data.merk);
+            }
+        });
+    });
+
 
 } );
