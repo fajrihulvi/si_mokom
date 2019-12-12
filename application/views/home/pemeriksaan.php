@@ -32,19 +32,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>163000001342</td>
-                                        <td>TANJUNG PADANG</td>
-                                        <td>ALI YASIN</td>
-                                        <td>Jl. H SELONG RT.13/RW.01</td>
-                                        <td>B2</td>
-                                        <td>13200</td>
-                                        <td>Pemeliharaan</td>
-                                        <td>Modem Normal</td>
-                                        <td>Restart Modem</td>
-                                        <td>Belum Selesai</td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                     </div>

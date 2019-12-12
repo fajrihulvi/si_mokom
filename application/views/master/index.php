@@ -26,7 +26,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="mb-2">
-                            <button class="btn btn-warning mr-2"><i class="fa fa-plus-square"></i> Tambah Pelanggan</button>
+                            <a href="<?= base_url('pelanggan/tambah') ?>" class="btn btn-warning mr-2"><i class="fa fa-plus-square"></i> Tambah Pelanggan</a>
                             <button class="btn btn-outline-primary"><i class="fa fa-print"></i> Print</button>
                         </div>
                         <div class="table-responsive">
@@ -59,9 +59,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $i=1; foreach ($pelanggan as $p): ?>
                                     <tr>
-                                        <td>1</td>
-                                        <td>16300</td>
+                                        <td><?= $i ?></td>
                                         <td>CUSTOMER</td>
                                         <td>163000001342</td>
                                         <td>TANJUNG</td>
@@ -79,6 +79,7 @@
                                         <td>85338939606</td>
                                         <td>TELKOMSEL</td>
                                     </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

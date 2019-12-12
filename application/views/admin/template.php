@@ -60,8 +60,16 @@
                     <li class="nav-item">
                         <a href="<?= base_url('home/reset_modem') ?>" class="nav-link "><span class="pcoded-micon"><i class="fas fa-history"></i></span><span class="pcoded-mtext">Reset Modem</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a href="<?= base_url('pelanggan') ?>" class="nav-link "><span class="pcoded-micon"><i class="fas fa-database"></i></span><span class="pcoded-mtext">Master Data</span></a>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#" class="nav-link pcoded-hasmenu"><span class="pcoded-micon"><i class="fas fa-database"></i></span><span class="pcoded-mtext">Master Data</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="<?= base_url('site') ?>">Site</a></li>
+                            <li><a href="<?= base_url('meter') ?>">Meter</a></li>
+                            <li><a href="<?= base_url('modem') ?>">Modem</a></li>
+                            <li><a href="<?= base_url('simcard') ?>">Sim Card</a></li>
+                            <li><a href="<?= base_url('pelanggan') ?>">Pelanggan</a></li>
+                            <li><a href="<?= base_url('vendor') ?>">Vendor</a></li>
+                        </ul>
                     </li>
                 </ul>
                 
@@ -166,11 +174,11 @@
                         <li>
                             <div class="dropdown drp-user">
                                 <a href="#!" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="<?= base_url('assets/images/user/avatar-1.jpg') ?>" class="img-radius wid-40" alt="User-Profile-Image">
+                                    <img src="<?= base_url('assets/images/user/default.png') ?>" class="img-radius wid-40" alt="User-Profile-Image">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right profile-notification">
                                     <div class="pro-head">
-                                        <img src="<?= base_url('assets/images/user/avatar-1.jpg') ?>" class="img-radius" alt="User-Profile-Image">
+                                        <img src="<?= base_url('assets/images/user/default.png') ?>" class="img-radius" alt="User-Profile-Image">
                                         <span>John Doe</span>
                                         <a href="<?= base_url('auth/logout') ?>" class="dud-logout" title="Logout">
                                             <i class="feather icon-log-out"></i>
@@ -189,22 +197,22 @@
     </header>
     <!-- [ Header ] end -->
 
-<?= $contents ?>
+    <?= $contents ?>
 
-<!-- Required Js -->
-<script src="<?= base_url('assets/js/vendor-all.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/plugins/bootstrap.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/pcoded.min.js') ?>"></script>
+    <!-- Required Js -->
+    <script src="<?= base_url('assets/js/vendor-all.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/plugins/bootstrap.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/pcoded.min.js') ?>"></script>
 
-<!-- Apex Chart -->
-<!-- <script src="<?= base_url('assets/js/plugins/apexcharts.min.js') ?>"></script> -->
+    <!-- Apex Chart -->
+    <!-- <script src="<?= base_url('assets/js/plugins/apexcharts.min.js') ?>"></script> -->
 
-<!-- custom-chart js -->
-<!-- <script src="<?= base_url('assets/js/pages/dashboard-main.js') ?>"></script> -->
-<!-- <script src="<?= base_url('assets/js/pages/chart-apex.js') ?>"></script> -->
-<script src="<?= base_url('assets/js/jquery.dataTables.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/dataTables.bootstrap4.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/myscript.js')?>"></script>
+    <!-- custom-chart js -->
+    <!-- <script src="<?= base_url('assets/js/pages/dashboard-main.js') ?>"></script> -->
+    <!-- <script src="<?= base_url('assets/js/pages/chart-apex.js') ?>"></script> -->
+    <script src="<?= base_url('assets/js/jquery.dataTables.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/dataTables.bootstrap4.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/myscript.js')?>"></script>
 
 </body>
 
