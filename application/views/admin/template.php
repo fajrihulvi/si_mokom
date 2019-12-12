@@ -199,6 +199,7 @@
 
     <?= $contents ?>
 
+    <script>var base_url = '<?= base_url() ?>';</script>
     <!-- Required Js -->
     <script src="<?= base_url('assets/js/vendor-all.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/plugins/bootstrap.min.js') ?>"></script>

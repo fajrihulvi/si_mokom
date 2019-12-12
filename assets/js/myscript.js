@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-	console.log('ok');
+	console.log('Js Aman');
     $('#dataTable').DataTable();
 
     //Site
     $('#siteAdd').on('click', function () {
         //console.log(id);
-        $('.modal-body form').attr('action', 'http://localhost/si_mokom/site/tambah');
+        $('.modal-body form').attr('action', base_url+'site/tambah');
         $('.modal-header h5').html('Tambah Site');
         $('#site_code').val('');
         $('#site_name').val('');
@@ -14,11 +14,11 @@ $(document).ready(function() {
 
     $('#dataTable').on('click', '#editSite', function () {
         const id = $(this).data('id');
-        $('.modal-body form').attr('action', 'http://localhost/si_mokom/site/edit/' + id);
+        $('.modal-body form').attr('action', base_url+'site/edit/' + id);
         $('.modal-header h5').html('Ubah Data Site');
 
         $.ajax({
-            url: 'http://localhost/si_mokom/site/tampilubah',
+            url: base_url+'site/tampilubah',
             data: { id: id },
             dataType: 'json',
             method: 'post',
@@ -32,7 +32,7 @@ $(document).ready(function() {
     //METER
     $('#meterAdd').on('click', function () {
         //console.log(id);
-        $('.modal-body form').attr('action', 'http://localhost/si_mokom/meter/tambah');
+        $('.modal-body form').attr('action', base_url+'meter/tambah');
         $('.modal-header h5').html('Tambah Data Meter');
         $('#no_seri').val('');
         $('#type').val('');
@@ -41,11 +41,11 @@ $(document).ready(function() {
 
     $('#dataTable').on('click', '#editMeter', function () {
         const id = $(this).data('id');
-        $('.modal-body form').attr('action', 'http://localhost/si_mokom/meter/edit/' + id);
+        $('.modal-body form').attr('action', base_url+'meter/edit/' + id);
         $('.modal-header h5').html('Ubah Data meter');
         console.log(id);
         $.ajax({
-            url: 'http://localhost/si_mokom/meter/tampilubah',
+            url: base_url+'meter/tampilubah',
             data: { id: id },
             dataType: 'json',
             method: 'post',
@@ -60,7 +60,7 @@ $(document).ready(function() {
     //MODEM
     $('#modemAdd').on('click', function () {
         //console.log(id);
-        $('.modal-body form').attr('action', 'http://localhost/si_mokom/modem/tambah');
+        $('.modal-body form').attr('action', base_url+'modem/tambah');
         $('.modal-header h5').html('Tambah Data Modem');
         $('#no_imei').val('');
         $('#type').val('');
@@ -69,11 +69,11 @@ $(document).ready(function() {
 
     $('#dataTable').on('click', '#editmodem', function () {
         const id = $(this).data('id');
-        $('.modal-body form').attr('action', 'http://localhost/si_mokom/modem/edit/' + id);
+        $('.modal-body form').attr('action', base_url+'modem/edit/' + id);
         $('.modal-header h5').html('Ubah Data Modem');
         console.log(id);
         $.ajax({
-            url: 'http://localhost/si_mokom/modem/tampilubah',
+            url: base_url+'modem/tampilubah',
             data: { id: id },
             dataType: 'json',
             method: 'post',
@@ -88,7 +88,7 @@ $(document).ready(function() {
     //SIMCARD
     $('#simcardAdd').on('click', function () {
         //console.log(id);
-        $('.modal-body form').attr('action', 'http://localhost/si_mokom/simcard/tambah');
+        $('.modal-body form').attr('action', base_url+'simcard/tambah');
         $('.modal-header h5').html('Tambah Data Sim Card');
         $('#no_sim').val('');
         $('#brand').val('');
@@ -96,11 +96,11 @@ $(document).ready(function() {
 
     $('#dataTable').on('click', '#editsimcard', function () {
         const id = $(this).data('id');
-        $('.modal-body form').attr('action', 'http://localhost/si_mokom/simcard/edit/' + id);
+        $('.modal-body form').attr('action', base_url+'simcard/edit/' + id);
         $('.modal-header h5').html('Ubah Data Sim Card');
         console.log(id);
         $.ajax({
-            url: 'http://localhost/si_mokom/simcard/tampilubah',
+            url: base_url+'simcard/tampilubah',
             data: { id: id },
             dataType: 'json',
             method: 'post',
