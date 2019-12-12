@@ -55,5 +55,32 @@ $(document).ready(function() {
         });
     });
 
+    $('#modemAdd').on('click', function () {
+        //console.log(id);
+        $('.modal-body form').attr('action', 'http://localhost/si_mokom/modem/tambah');
+        $('.modal-header h5').html('Tambah Data Modem');
+        $('#no_imei').val('');
+        $('#type').val('');
+        $('#merk').val('');
+    });
+
+    $('#dataTable').on('click', '#editmodem', function () {
+        const id = $(this).data('id');
+        $('.modal-body form').attr('action', 'http://localhost/si_mokom/modem/edit/' + id);
+        $('.modal-header h5').html('Ubah Data Modem');
+        console.log(id);
+        $.ajax({
+            url: 'http://localhost/si_mokom/modem/tampilubah',
+            data: { id: id },
+            dataType: 'json',
+            method: 'post',
+            success: function (data) {
+                $('#no_imei').val(data.no_imei);
+                $('#type').val(data.tipe);
+                $('#merk').val(data.merk);
+            }
+        });
+    });
+
 
 } );
