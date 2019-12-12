@@ -3,6 +3,7 @@ $(document).ready(function() {
 	console.log('ok');
     $('#dataTable').DataTable();
 
+    //Site
     $('#siteAdd').on('click', function () {
         //console.log(id);
         $('.modal-body form').attr('action', 'http://localhost/si_mokom/site/tambah');
@@ -28,6 +29,7 @@ $(document).ready(function() {
         });
     });
 
+    //METER
     $('#meterAdd').on('click', function () {
         //console.log(id);
         $('.modal-body form').attr('action', 'http://localhost/si_mokom/meter/tambah');
@@ -55,6 +57,7 @@ $(document).ready(function() {
         });
     });
 
+    //MODEM
     $('#modemAdd').on('click', function () {
         //console.log(id);
         $('.modal-body form').attr('action', 'http://localhost/si_mokom/modem/tambah');
@@ -81,6 +84,33 @@ $(document).ready(function() {
             }
         });
     });
+
+    //SIMCARD
+    $('#simcardAdd').on('click', function () {
+        //console.log(id);
+        $('.modal-body form').attr('action', 'http://localhost/si_mokom/simcard/tambah');
+        $('.modal-header h5').html('Tambah Data Sim Card');
+        $('#no_sim').val('');
+        $('#brand').val('');
+    });
+
+    $('#dataTable').on('click', '#editsimcard', function () {
+        const id = $(this).data('id');
+        $('.modal-body form').attr('action', 'http://localhost/si_mokom/simcard/edit/' + id);
+        $('.modal-header h5').html('Ubah Data Sim Card');
+        console.log(id);
+        $.ajax({
+            url: 'http://localhost/si_mokom/simcard/tampilubah',
+            data: { id: id },
+            dataType: 'json',
+            method: 'post',
+            success: function (data) {
+                $('#no_sim').val(data.no_sim);
+                $('#brand').val(data.brand);
+            }
+        });
+    });
+
 
 
 } );
